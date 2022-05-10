@@ -16,11 +16,11 @@ function App() {
         <button onClick={handleOpenAlert}>Open greeting</button>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/Olasyp/FrontEndDaftAcademy"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Link to my project on GitHub
         </a>
       </header>
     </div>
