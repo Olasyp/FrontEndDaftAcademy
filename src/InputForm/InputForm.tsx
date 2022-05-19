@@ -65,5 +65,6 @@ export const InputForm = (props?: InputFormProps) => {
         <input onInput={handleInputChange} value={inputValue} type="text"/>
         <br/>
         <button onClick={handleSubmit} disabled={!formReadyToSubmit}>Submit username</button>
+        <div>Link: https://github.com/Olasyp/FrontEndDaftAcademy/pull/1/commits</div>
     </div>
 }
