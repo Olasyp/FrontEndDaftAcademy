@@ -19,7 +19,6 @@ export const InputForm = (props?: InputFormProps) => {
         setInputValue(event.target.value);
         if (messageLength < 3 || messageLength > 20) {
             if (messageLength < 3) {
-                let b = userValue.charAt(0) !== userValue.charAt(0).toUpperCase();
                 setErrorMessage(`User name ${userValue} is too short`)
             }
             else {
@@ -41,7 +40,10 @@ export const InputForm = (props?: InputFormProps) => {
         if (formReadyToSubmit) {
             localStorage.setItem(storageFormKey, inputValue)
         }
-    }, [inputValue])
+        else {
+            console.log("Problem")
+        }
+    }, [inputValue]) // eslint-disable-line react-hooks/exhaustive-deps
 
     useEffect(() => {
         let valueToSet = '';
@@ -55,7 +57,7 @@ export const InputForm = (props?: InputFormProps) => {
         }
 
         setInputValue(valueToSet);
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     return <div style={{display: "flex", flexDirection: 'column'}}>
         {displayError && <div style={{color: 'red'}}>{errorMessage}</div>}
