@@ -2,12 +2,12 @@ import React from 'react';
 import './App.css';
 import {InputForm} from "./InputForm";
 import {Surprise} from "./Surprise";
-import {About} from "./About";
+import {About} from "./about";
 import {Contact} from "./Contact";
 import {Routes, Route, Link} from "react-router-dom";
 
 export const routesPaths = {
-    about: 'About',
+    about: 'about',
     contact: 'contact',
     surprise: 'Surprise'
 }
