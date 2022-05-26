@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
 import {InputForm} from "./InputForm";
+import {Surprise} from "./Surprise";
+import {About} from "./About";
+import {Contact} from "./Contact";
 import {Routes, Route, Link} from "react-router-dom";
 
 export const routesPaths = {
-    about: 'about',
+    about: 'About',
     contact: 'contact',
-    surprise: 'surprise'
+    surprise: 'Surprise'
 }
 
 function App() {
@@ -14,7 +17,7 @@ function App() {
       <div className="App">
           <div className='App-header'>
               <div>
-                  logo
+                  Welcome to my page!
               </div>
               <div>
                   <Link className='App-link' to={'/'}>Home</Link>
@@ -26,9 +29,9 @@ function App() {
           <Routes>
               <Route path='/' element={<InputForm defaultValue={'Welcome :) '}/>}/>
               <Route path='*' element={<div>404</div>}/>
-              <Route path={`/${routesPaths.about}`} element={<div>About</div>}/>
-              <Route path={`/${routesPaths.contact}`} element={<div>About</div>}/>
-              <Route path={`/${routesPaths.surprise}`} element={<div>Form</div>}/>
+              <Route path={`/${routesPaths.about}`} element={<About/>}/>
+              <Route path={`/${routesPaths.contact}`} element={<Contact/>}/>
+              <Route path={`/${routesPaths.surprise}`} element={<Surprise/>}/>
           </Routes>
       </div>
   );
