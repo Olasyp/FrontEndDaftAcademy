@@ -8,7 +8,7 @@ import {Routes, Route, Link} from "react-router-dom";
 
 export const routesPaths = {
     about: 'about',
-    contact: 'contact',
+    contact: 'Contact',
     surprise: 'Surprise'
 }
 
